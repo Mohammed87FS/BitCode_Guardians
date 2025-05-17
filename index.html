@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitCode Guardians</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        
+        <div id="ui-overlay">
+            <div id="level-info">Level: <span id="level-num">1</span></div>
+            <div id="message-panel">
+                <div id="encoder-controls" class="panel">
+                    <h2>Encoder Panel</h2>
+                    <div id="bit-budget">Bit Flips: <span id="bits-remaining">3</span></div>
+                    <button id="encode-btn">Encode Message</button>
+                </div>
+                
+                <div id="decoder-controls" class="panel hidden">
+                    <h2>Decoder Panel</h2>
+                    <div id="error-info">Errors Detected: <span id="error-count">0</span></div>
+                    <button id="correct-btn">Apply Correction</button>
+                </div>
+            </div>
+            
+            <div id="game-status"></div>
+            <div id="tutorial-tip"></div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+
+    <script src="scripts/encoding.js"></script>
+    <script src="scripts/grid.js"></script>
+    <script src="scripts/renderer.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/effects.js"></script>
+    <script src="scripts/levels.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

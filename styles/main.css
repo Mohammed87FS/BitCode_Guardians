@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #050510;
+    color: #eef;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#game-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#level-info {
+    background: rgba(10, 20, 40, 0.7);
+    border: 1px solid #4488cc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    box-shadow: 0 0 15px rgba(66, 153, 225, 0.3);
+    pointer-events: auto;
+}
+
+#message-panel {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel {
+    background: rgba(10, 20, 40, 0.8);
+    border: 1px solid #4488cc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 0 20px rgba(66, 153, 225, 0.4);
+    pointer-events: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    color: #44aaff;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button {
+    background-color: #2266aa;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.3s;
+    pointer-events: auto;
+}
+
+button:hover {
+    background-color: #3377cc;
+    box-shadow: 0 0 10px rgba(66, 153, 225, 0.6);
+}
+
+#game-status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(10, 20, 40, 0.9);
+    border: 1px solid #4488cc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+#game-status.visible {
+    opacity: 1;
+}
+
+#tutorial-tip {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 20, 40, 0.8);
+    border: 1px solid #44aaff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    max-width: 80%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#tutorial-tip.visible {
+    opacity: 1;
+}
+
+#bit-budget, #error-info {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+/* Glow text effect */
+.glow-text {
+    text-shadow: 0 0 5px #44aaff, 0 0 10px #44aaff;
+}
